@@ -1,6 +1,6 @@
 # Задача 7: Прайс-лист материалов (Работа со словарями)
 
-# Создаём словарь с 5 материалами и ценами
+# Шаг 1. Создаём словарь с 5 материалами и ценами
 prices = {
     "Кирпич": 15,
     "Цемент": 500,
@@ -26,3 +26,11 @@ prices.pop("Песок")
 # Расчет средней цены
 all_prices = prices.values()
 average_price = sum(all_prices) / len(all_prices)
+
+
+# Вывод итогов
+print("=== ИТОГОВЫЙ ПРАЙС-ЛИСТ ===")
+for material, price in prices.items():
+    print(f"{material}: {round(price, 2)} руб.")
+
+print(f"\nСредняя цена материалов: {round(average_price, 2)} руб.")
