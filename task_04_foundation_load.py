@@ -23,3 +23,10 @@ elif 6 <= day_number <= 7:
 else:
     status = "Ошибка"
     schedule = "Неверный ввод"
+
+
+# Вывод результатов
+print(f"=== ГРАФИК РАБОТЫ ===")
+print(f"День №{day_number}: {day_name}")
+print(f"Статус: {status}")
+print(f"Режим: {schedule}")
