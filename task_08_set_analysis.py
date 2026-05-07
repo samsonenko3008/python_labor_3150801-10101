@@ -23,3 +23,10 @@ only_first = set1 - (set2 | set3)
 # 4. Материалы, которые есть ровно у двух подрядчиков
 # (которые в 1 и 2, или 2 и 3, или 1 и 3, за вычетом общих для всех)
 exactly_two = (set1 & set2 | set2 & set3 | set1 & set3) - common_for_all
+
+# Вывод результатов
+print("=== АНАЛИЗ ЗАКАЗОВ ===")
+print(f"Всего уникальных позиций: {all_unique}")
+print(f"Общие материалы для всех: {common_for_all if common_for_all else 'Нет общих'}")
+print(f"Только у первого подрядчика: {only_first}")
+print(f"Материалы ровно у двух: {exactly_two}")
