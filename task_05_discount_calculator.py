@@ -17,3 +17,11 @@ else:
 # Вычисление итоговой суммы
 discount_amount = (total_raw * discount_percent) / 100
 final_price = total_raw - discount_amount
+
+# Вывод информации
+print("=== РАСЧЁТ СТОИМОСТИ МАТЕРИАЛОВ ===")
+print(f"Цена за ед.: {unit_price} руб.")
+print(f"Количество: {quantity} шт.")
+print(f"Сумма без скидки: {total_raw} руб.")
+print(f"Ваша скидка: {discount_percent}% (-{discount_amount} руб.)")
+print(f"Итого к оплате: {final_price} руб.")
