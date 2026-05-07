@@ -14,8 +14,15 @@ construction_year = 2024
 print("=== ПАСПОРТ СТРОИТЕЛЬНОГО ОБЪЕКТА ===")
 print(f"Составитель: {student_name}")
 print(f"Группа: {group_number}")
+
+print() #добавила пустую строку в соответствии с примером из задания
+
 print(f"Объект: {project_name}")
 print(f"Этажность: {floors} эт.")
 print(f"Высота: {height} м")
 print(f"Тип: {'Жилой' if is_residential else 'Нежилой'}")
 print(f"Год постройки: {construction_year}")
+
+# Комментарии к заданию:
+# Где находится: д. Новое Девяткино, ул. Главная.
+# Почему выбран: мой адрес проживания.
