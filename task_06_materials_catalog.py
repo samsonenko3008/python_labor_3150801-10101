@@ -19,3 +19,8 @@ materials.append("Гвозди")
 # Удаление второго элемента 
 removed_item = materials.pop(1) 
 print(f"Удален элемент: {removed_item}")
+
+# Итоговый список и его длина
+print("=== ОБНОВЛЕННЫЙ КАТАЛОГ ===")
+print(f"Список: {materials}")
+print(f"Количество позиций: {len(materials)}")
