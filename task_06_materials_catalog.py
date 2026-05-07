@@ -15,3 +15,7 @@ print(f"Средние элементы: {materials[1:-1]}") # Выводим в
 # Добавление 2 новых материалов
 materials.append("Доска")
 materials.append("Гвозди")
+
+# Удаление второго элемента 
+removed_item = materials.pop(1) 
+print(f"Удален элемент: {removed_item}")
