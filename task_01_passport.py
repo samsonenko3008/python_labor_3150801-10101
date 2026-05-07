@@ -9,3 +9,13 @@ floors = 15
 height = 45.0
 is_residential = True 
 construction_year = 2024
+
+# Вывод информации о проекте в читаемом виде
+print("=== ПАСПОРТ СТРОИТЕЛЬНОГО ОБЪЕКТА ===")
+print(f"Составитель: {student_name}")
+print(f"Группа: {group_number}")
+print(f"Объект: {project_name}")
+print(f"Этажность: {floors} эт.")
+print(f"Высота: {height} м")
+print(f"Тип: {'Жилой' if is_residential else 'Нежилой'}")
+print(f"Год постройки: {construction_year}")
