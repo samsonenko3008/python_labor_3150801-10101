@@ -12,3 +12,14 @@ elif day_number == 5: day_name = "Пятница"
 elif day_number == 6: day_name = "Суббота"
 elif day_number == 7: day_name = "Воскресенье"
 else: day_name = "Неизвестный день"
+
+# Определение режима работы
+if 1 <= day_number <= 5:
+    status = "Рабочий день"
+    schedule = "8:00 начало смены"
+elif 6 <= day_number <= 7:
+    status = "Выходной"
+    schedule = "Отдых"
+else:
+    status = "Ошибка"
+    schedule = "Неверный ввод"
