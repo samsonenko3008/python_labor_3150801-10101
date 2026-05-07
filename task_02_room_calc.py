@@ -8,3 +8,17 @@ height = 2.75
 
 # Цена покраски за квадратный метр (руб)
 price_per_sq_m = 125
+
+
+# Расчеты площади пола, площади стен, объема помещения и стоимости покраски стен
+# Площадь пола 
+floor_area = length * width
+
+# Площадь стен (периметр умноженный на высоту)
+walls_area = 2 * height * (length + width)
+
+# Объём помещения
+volume = length * width * height
+
+# Итоговая стоимость покраски стен
+total_cost = walls_area * price_per_sq_m
