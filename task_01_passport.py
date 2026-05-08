@@ -4,7 +4,7 @@
 # Объявление переменных 
 student_name = "Самсоненко Ирина Сергеевна" 
 group_number = "3150801/10101" 
-project_name = "ЖК "Заречный парк""
+project_name = "ЖК Заречный парк"
 floors = 15 
 height = 45.0
 is_residential = True 
