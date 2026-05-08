@@ -10,21 +10,21 @@ warehouse = {
 }
 
 # 2. Расчет общей стоимости и поиск самого дорогого товара
-total_warehouse_value = 0
-most_expensive_name = ""
-max_item_cost = 0
-critical_items = []
+total_warehouse_value = 0 # общая стоимость материалов пока 0
+most_expensive_name = "" # стоимость самого дорогого материала (пустая строка)
+max_item_cost = 0 # переменная для хранения максимальной стоимости одного товара
+critical_items = [] # пустой список для добавления информации о критических остатках
 
-for name, data in warehouse.items():
-    item_cost = data["quantity"] * data["price"]
+for name, data in warehouse.items(): 
+    item_cost = data["quantity"] * data["price"] # стоимость запаса материала
     total_warehouse_value += item_cost
     
-    # Поиск самого дорогого запаса
+    # Поиск самого дорогого запаса: если стоимость текущего товара больше предыдущего, запоминаем ее
     if item_cost > max_item_cost:
         max_item_cost = item_cost
         most_expensive_name = name
         
-    # Проверка критических остатков
+    # Проверка критических остатков: если текущее количество меньше минимально допустимого, добавляем в список строку с предупреждением
     if data["quantity"] < data["min_quantity"]:
         critical_items.append(f"{name}: {data['quantity']} < {data['min_quantity']}")
 
@@ -33,11 +33,12 @@ for name, data in warehouse.items():
 print("=" * 65)
 print("СИСТЕМА УЧЁТА СКЛАДА")
 print("=" * 65)
-# Заголовки согласно заданию
+# Заголовки согласно заданию с выравниванием 
 print(f"{'Материал':<12} | {'Кол-во':<8} | {'Цена':<8} | {'Мин.':<6} | {'Стоимость'}")
 print("-" * 65)
 
-for name, data in warehouse.items():
+# Цикл по всем материалам
+for name, data in warehouse.items(): 
     # Считаем стоимость для каждой позиции
     item_cost = data["quantity"] * data["price"]
     
@@ -59,7 +60,7 @@ if critical_items:
 # Имитация выдачи
 print("\n=== ВЫДАЧА МАТЕРИАЛА ===")
 print(f"Выдано 25 ед. Цемент")
-warehouse["Цемент"]["quantity"] -= 25
+warehouse["Цемент"]["quantity"] -= 25 # уменьшаем количество цемента
 print(f"Новый остаток: {warehouse['Цемент']['quantity']}")
 
 
